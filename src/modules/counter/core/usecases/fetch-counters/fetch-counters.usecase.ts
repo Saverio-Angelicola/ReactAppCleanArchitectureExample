@@ -1,6 +1,6 @@
 import {
   AppDispatch,
-  AppStates,
+  RootState,
   AppThunk,
   Dependencies,
 } from "../../../../store";
@@ -11,7 +11,7 @@ export const fetchCounters: AppThunk<Promise<void>> =
   () =>
   async (
     dispatch: AppDispatch,
-    _getState: () => AppStates,
+    _getState: () => RootState,
     { counterRepository }: Dependencies
   ) => {
     const counters: Counter[] = await counterRepository.GetCounters();
