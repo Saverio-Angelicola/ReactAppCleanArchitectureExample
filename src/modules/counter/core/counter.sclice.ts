@@ -4,7 +4,7 @@ import {
   createSlice,
 } from "@reduxjs/toolkit";
 import { Counter } from "./domain/counter.types";
-import { AppStates } from "../../store";
+import { RootState } from "../../store";
 
 const counterAdapter = createEntityAdapter({
   selectId: (counter: Counter) => counter.id,
@@ -29,4 +29,4 @@ export const counterSlice = createSlice({
 console.log(counterAdapter.getInitialState({}, []));
 export const { LoadingCountersWithSuccess } = counterSlice.actions;
 
-export const { selectAll } = counterAdapter.getSelectors((state: AppStates) => state.counters);
+export const { selectAll } = counterAdapter.getSelectors((state: RootState) => state.counters);
