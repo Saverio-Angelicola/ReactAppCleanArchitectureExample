@@ -4,7 +4,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import { createStore } from "../modules/store.ts";
-import CounterRepositoryInMemory from "../modules/counter/adapters/counter-repository.in-memory.ts";
+import CounterRepositoryInMemory from "../modules/counter/adapters/in-memory/counter-repository.in-memory.ts";
 
 const store = createStore({
   counterRepository: new CounterRepositoryInMemory([

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, test } from "vitest";
 import { AppStore, createStore } from "../../../../store";
-import CounterRepositoryInMemory from "../../../adapters/counter-repository.in-memory";
+import CounterRepositoryInMemory from "../../../adapters/in-memory/counter-repository.in-memory";
 import { fetchCounters } from "./fetch-counters.usecase";
 
 describe("fetch counters tests", () => {

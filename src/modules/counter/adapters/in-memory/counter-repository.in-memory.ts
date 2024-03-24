@@ -1,5 +1,5 @@
-import { CounterRepositoryInterface } from "../core/domain/counter-repository.interface";
-import { Counter } from "../core/domain/counter.types";
+import { CounterRepositoryInterface } from "../../core/domain/counter-repository.interface";
+import { Counter } from "../../core/domain/counter.types";
 
 export default class CounterRepositoryInMemory implements CounterRepositoryInterface {
     private counters: Counter[] = [];
